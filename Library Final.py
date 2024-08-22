@@ -1,5 +1,5 @@
 from tkinter import *
-import pymysql as p
+import pymysql
 from tkinter import messagebox
 from tkinter.ttk import Combobox
 from tkinter.ttk import Treeview
@@ -474,7 +474,7 @@ def deleteusers():
 def connectdb():
     global con,cur
     #Enter your username and password of MySQL
-    con=p.connect(host="localhost",user="root",passwd="abcd1234")
+    con=pymysql.connect(host="localhost",user="root",passwd="Amit_Kr#1630")
     cur=con.cursor()
     cur.execute('CREATE DATABASE IF NOT EXISTS Library')
     cur.execute('USE Library')
